@@ -2,7 +2,7 @@
 
 
 PHP script for rate limiting with Redis.\
-The maximum number of calls  and the timeframe in seconds can be defined from .env.
+The maximum number of calls  and the timeframe in seconds can be defined from .env.\
 This script was written on an Ubuntu Machine.
 
 ## Usage
