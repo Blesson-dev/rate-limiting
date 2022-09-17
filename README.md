@@ -34,7 +34,7 @@ If Redis doesn't need authentication, remove REDIS_PASSWORD from .env
 
 ```
 MAX_CALLS_LIMIT : is the maximum number of calls a user can access the resource.
-TIME_PERIOD : defines the timeframe in seconds within which a user is allowed to access the resource per the MAX_CALLS_LIMIT./
+TIME_PERIOD : defines the timeframe in seconds within which a user is allowed to access the resource per the MAX_CALLS_LIMIT.\
 (Set this to 1 if ratelimiting is per sec.)
 REDIS_URL : Redis connection url (example localhost value being 127.0.0.1)
 REDIS_PORT : Redis Port to connect (example port being 6379)
