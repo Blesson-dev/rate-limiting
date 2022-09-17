@@ -20,7 +20,7 @@ This script was written on an Ubuntu Machine.
 
 ##### Git clone via command line
 
-`git clone https://github.com/Blesson-dev/rate-limiting.git` to the project folder under /var/www/html/
+`git clone https://github.com/Blesson-dev/rate-limiting.git .` to the project folder under /var/www/html/
 
 ##### Composer install
 
