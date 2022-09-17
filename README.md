@@ -6,6 +6,13 @@ This script was written on a Ubuntu Machine.
 
 ## Usage
 
+#### Prerequisites
+
+- LAMP Stack
+- Redis Server
+- Redis Library for PHP
+  - Install the php-redis extension : `sudo apt-get install php{$PHP_VERSION}-redis`
+
 #### Setup Project
 
 ##### Git Clone Via Command Line
