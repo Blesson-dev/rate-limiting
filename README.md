@@ -2,6 +2,7 @@
 
 
 PHP script for rate limiting with Redis.
+The maximum number of calls a user can access the resource and the timeframe in seconds within which a user is allowed to access the resource per the limit can be defined from .env.
 This script was written on a Ubuntu Machine.
 
 ## Usage
@@ -9,6 +10,8 @@ This script was written on a Ubuntu Machine.
 #### Prerequisites
 
 - LAMP Stack
+- Composer 2.0 
+- Install composer from : `https://getcomposer.org/download/`
 - Redis Server
 - Redis Library for PHP
   - Install the php-redis extension : `sudo apt-get install php{$PHP_VERSION}-redis`
@@ -29,6 +32,15 @@ Copy contents from .env.example to a newly created .env file.
 Replace with appropriate values inside .env file.
 If Redis doesn't need authentication, remove REDIS_PASSWORD from .env
 
+```
+MAX_CALLS_LIMIT : is the maximum number of calls a user can access the resource.
+TIME_PERIOD : defines the timeframe in seconds within which a user is allowed to access the resource per the MAX_CALLS_LIMIT.
+REDIS_URL : Redis connection url
+REDIS_PORT : Redis Port to connect
+REDIS_PASSWORD : redis password if authentication is required, if not remove this from .env
+
+```
+
 ### Test Ratelimiter
 
 Execute Following command from the terminal.
@@ -41,8 +53,10 @@ curl -H "Accept: text/plain" -H "Content-Type: text/plain" -X GET http://localho
 
 #### Output
 Assuming values 
+```
 MAX_CALLS_LIMIT=3
 TIME_PERIOD=10
+```
 
 ```
 [1/5]: http://localhost/project_folder/index.php?1 --> <stdout>
