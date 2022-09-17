@@ -1,9 +1,9 @@
-# PHP Rate Limiting with Redis
+# PHP Rate Limiting With Redis
 
 
-PHP script for rate limiting with Redis.
-The maximum number of calls a user can access the resource and the timeframe in seconds within which a user is allowed to access the resource per the limit can be defined from .env.
-This script was written on a Ubuntu Machine.
+PHP script for rate limiting with Redis.\
+The maximum number of calls  and the timeframe in seconds can be defined from .env.
+This script was written on an Ubuntu Machine.
 
 ## Usage
 
@@ -11,25 +11,25 @@ This script was written on a Ubuntu Machine.
 
 - LAMP Stack
 - Composer 2.0 
-- Install composer from : `https://getcomposer.org/download/`
+  - Install composer from : `https://getcomposer.org/download/`
 - Redis Server
 - Redis Library for PHP
   - Install the php-redis extension : `sudo apt-get install php{$PHP_VERSION}-redis`
 
 #### Setup Project
 
-##### Git Clone Via Command Line
+##### Git clone via command line
 
-`git clone https://github.com/Blesson-dev/rate-limiting.git` to the project folder under /var/www/
+`git clone https://github.com/Blesson-dev/rate-limiting.git` to the project folder under /var/www/html/
 
-##### Composer Install
+##### Composer install
 
 Run `composer install` inside project folder to get all dependencies under vendor folder.
 
-#### Create env file from .env.example file
+#### Create .env file from .env.example file
 
-Copy contents from .env.example to a newly created .env file.
-Replace with appropriate values inside .env file.
+Copy contents from .env.example to a newly created .env file.\
+Replace with appropriate values inside .env file.\
 If Redis doesn't need authentication, remove REDIS_PASSWORD from .env
 
 ```
@@ -44,7 +44,7 @@ REDIS_PASSWORD : redis password if authentication is required, if not remove thi
 ### Test Ratelimiter
 
 Execute Following command from the terminal.
-Replace project_folder with appropriate name.
+Replace project_folder with project folder name.
 
 
 ```
